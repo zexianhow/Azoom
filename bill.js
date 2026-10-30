@@ -124,7 +124,7 @@ function initBill() {
                 '<p>Total paid: <b>' + money(b.billTotal) + '</b> (rental ' + money(bk.rentalCost) +
                     (bk.damageCharge ? ' + damages ' + money(bk.damageCharge) : '') + ')</p>' +
                 '<div class="btn-row">' +
-                    '<a class="btn btn-accent" href="home.html">Return Home</a>' +
+                    '<a class="btn btn-accent" href="index.html">Return Home</a>' +
                     '<a class="btn btn-outline" href="track.html?id=' + esc(b.id) + '">View Booking Summary</a>' +
                 '</div>' +
             '</div>';
