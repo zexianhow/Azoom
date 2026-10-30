@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom Car Rental | Book a Car</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="booking.js" defer></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <a href="home.html"><img src="logo_new.png" alt="AZoom Logo" class="logo-img"></a>
+            <a class="brand-name" href="home.html">AZoom <span>Car Rental</span></a>
+        </div>
+        <nav>
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="cars.html" class="nav-link">Our Cars</a>
+            <a href="booking.html" class="nav-link active">Book a Car</a>
+            <a href="collect.html" class="nav-link">Collect</a>
+            <a href="return.html" class="nav-link">Return</a>
+            <a href="track.html" class="nav-link">Track</a>
+            <a href="employee.html" class="nav-link">Staff</a>
+            <a href="login.html" class="nav-link nav-cta">Login</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-wide-1100">
+    <h1 class="page-title-center">Book Your Electric Vehicle</h1>
+    <p class="intro-center">Fill in the form below to reserve your electric car. You will confirm payment with a credit card on the next step.</p>
+
+    <form id="bookingForm" class="booking-form" novalidate>
+        <div class="field-row">
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" required class="text-field" placeholder="e.g. John Tan">
+            </div>
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" id="phone" name="phone" required class="text-field" placeholder="e.g. +65 9123 4567">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" required class="text-field" placeholder="e.g. john@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="car" class="form-label">Select a Car</label>
+            <select id="car" name="car" required class="select-input">
+                <option value="">-- Choose a Car --</option>
+            </select>
+            <div class="car-spec-panel" id="specPanel">
+                <h4 class="spec-title">Car Specifications</h4>
+                <div id="specContent"></div>
+            </div>
+        </div>
+
+        <div class="field-row">
+            <div class="form-group">
+                <label for="pickup-location" class="form-label">Pick-up Location (Collect at AZoom Office)</label>
+                <select id="pickup-location" name="pickup-location" required class="select-input">
+                    <option value="">-- Choose Branch Office --</option>
+                    <option value="b1">Tampines Branch Office</option>
+                    <option value="b2">Changi Airport Branch Office</option>
+                    <option value="b3">Woodlands Branch Office</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="return-location" class="form-label">Return Location (Drop-off at Designated Car Park)</label>
+                <select id="return-location" name="return-location" required class="select-input">
+                    <option value="">-- Choose Car Park --</option>
+                    <option value="b1">Tampines Designated Car Park</option>
+                    <option value="b2">Changi Airport Designated Car Park</option>
+                    <option value="b3">Woodlands Designated Car Park</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="rentalplan" class="form-label">Rental Plan</label>
+            <select id="rentalplan" name="rentalplan" required class="select-input">
+                <option value="">-- Select Rental Period --</option>
+                <option value="daily">Daily Rental</option>
+                <option value="weekly">Weekly Rental</option>
+                <option value="monthly">Monthly Rental</option>
+            </select>
+        </div>
+
+        <div class="field-row">
+            <div class="form-group">
+                <label for="pickup-date" class="form-label">Pick-up Date <small>(DD/MM/YYYY)</small></label>
+                <input type="text" id="pickup-date" class="text-field date-field" placeholder="e.g. 15/11/2026" maxlength="10" required>
+            </div>
+            <div class="form-group">
+                <label for="return-date" class="form-label">Return Date <small>(DD/MM/YYYY)</small></label>
+                <input type="text" id="return-date" class="text-field date-field" placeholder="e.g. 22/11/2026" maxlength="10" required>
+            </div>
+        </div>
+
+        <div class="quote-panel" id="quotePanel"></div>
+
+        <button class="btn-fullwidth" type="submit" style="margin-top:6px">Confirm Booking &amp; Continue to Payment</button>
+    </form>
+</main>
+
+<!-- Live Chat Widget -->
+<div class="static-chat-widget">
+    <div class="static-chat-box" id="chatWindow">
+        <div class="static-chat-header">
+            <span>AZoom Live Chat Support</span>
+            <span class="close-chat">✕</span>
+        </div>
+        <div class="static-chat-messages">
+            <p>Support: Hi! Welcome to AZoom Car Rental support.</p>
+            <p>Support: How can we assist you?</p>
+        </div>
+        <div class="static-input-area">
+            <input type="text" placeholder="Type your message..." class="chat-input">
+            <button class="chat-send-btn">Send</button>
+        </div>
+    </div>
+    <button class="static-chat-button">💬</button>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4>AZoom Car Rental</h4>
+            <p>Eco-friendly electric vehicle hire for daily, weekly and monthly rental.</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Email: azoomcarrental@yahoo.com.sg</p>
+            <p>Phone: +65 1234 5678</p>
+            <p>123 Electric Avenue, Singapore</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <p><a href="cars.html">Our Cars</a></p>
+            <p><a href="booking.html">Book a Car</a></p>
+            <p><a href="track.html">Track My Booking</a></p>
+            <p><a href="employee.html">Staff Portal</a></p>
+        </div>
+    </div>
+    <p class="footer-copyright">&copy; 2026 AZoom Car Rentals. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
